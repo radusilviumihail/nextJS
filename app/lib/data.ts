@@ -50,6 +50,20 @@ export async function fetchLatestInvoices() {
   }
 }
 
+// export async function fetchTotalPaidInvoices() {
+//   try {
+//     const data = await sql`
+//       SELECT COUNT(*) as count
+//       FROM invoices
+//       WHERE status = 'paid'
+//     `;
+//     return data[0].count;
+//   } catch (error) {
+//     console.error('Database Error:', error);
+//     throw new Error('Failed to fetch the total paid invoices.');
+//   }
+// }
+
 export async function fetchCardData() {
   try {
     // You can probably combine these into a single SQL query
